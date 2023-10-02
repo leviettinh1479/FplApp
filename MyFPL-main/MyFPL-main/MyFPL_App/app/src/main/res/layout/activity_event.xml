@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventActivity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/calendar"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_event" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layoutDirection="ltr"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_back_left" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/white_40dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/search" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Want to search ?"
+                android:lines="1"
+                android:fontFamily="@font/lexend"
+                android:padding="10dp"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/layout_event"
+            android:layout_marginHorizontal="15dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="?attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lexend_bold"
+                        android:text="Sắp tới"
+                        android:textColor="#273572"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="Xem thêm"
+                        android:textColor="#C2C2C2"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_event"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/lexend_bold"
+                    android:text="Đang diễn ra"
+                    android:textColor="#273572"
+                    android:textSize="16dp" />
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager_Slide"
+                    android:layout_width="match_parent"
+                    android:layout_height="185dp" />
+
+                <TextView
+                    android:id="@+id/my_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/lexend_bold"
+                    android:text="Nổi bật"
+                    android:textColor="#273572"
+                    android:textSize="16dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_event_trending"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/menu"
+        style="@style/BottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginHorizontal="10dp"
+        android:animateLayoutChanges="true"
+        android:animationCache="true"
+        android:background="@drawable/bg_bottom_navigation"
+        android:elevation="10sp"
+        android:scrollbarFadeDuration="10"
+        android:translationZ="30sp"
+        app:cnb_addBottomInset="false"
+        app:cnb_addLeftInset="false"
+        app:cnb_addRightInset="false"
+        app:cnb_addTopInset="false"
+        app:cnb_animationDuration="200"
+        app:cnb_badgeColor="@color/second"
+        app:cnb_iconSize="24dp"
+        app:cnb_menuResource="@menu/menu_bottom_navigation_event"
+        app:cnb_orientationMode="horizontal"
+        app:cnb_radius="20dp"
+        app:cnb_textAppearance="@style/BottomNavigationView"
+        app:cnb_unselectedColor="@color/purple"
+        app:layout_anchorGravity="bottom"
+        app:layout_anchor="@id/background"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

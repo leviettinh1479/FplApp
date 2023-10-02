@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name" translatable="false">MyFPL</string>
+    <string name="login_with_google">Login with Google</string>
+    <string name="choosing_a_campus">Choosing a Campus</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="user">User</string>
+    <string name="notification">Notification</string>
+    <string name="calendar">Schedule</string>
+    <string name="home">Home</string>
+    <string name="extensions">Extensions</string>
+    <string name="event">Event</string>
+    <string name="wallet">Wallet</string>
+    <string name="form">Form</string>
+
+    <string name="shareImage" translatable="false">ImageShareFragment</string>
+    <string name="account">Account</string>
+    <string name="setting_application">Setting application</string>
+    <string name="logout">Logout</string>
+    <string name="user_profile">User profile</string>
+    <string name="location">Location</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="study">Study</string>
+    <string name="active">Active</string>
+    <string name="tuition">Tuition</string>
+    <string name="filter">Filter</string>
+    <string name="personal_information">Personal information</string>
+    <string name="student_code">Student code</string>
+    <string name="gender">Gender</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="learning_information">Learning Information</string>
+    <string name="account_code">Account code</string>
+    <string name="course">Course</string>
+    <string name="major">Major</string>
+    <string name="day_admission">Day admission</string>
+    <string name="calendar_types">Calendar types</string>
+    <string name="subject">Subject</string>
+    <string name="time">Time</string>
+    <string name="calendar_week">Calendar Week</string>
+    <string name="calendar_month">Calendar Month</string>
+    <string name="apply">Apply</string>
+    <string name="trade_history">Trade history</string>
+    <string name="this_week">This week</string>
+    <string name="last_week">Last week</string>
+    <string name="next_week">Next week</string>
+    <string name="this_month">This month</string>
+    <string name="last_month">Last month</string>
+    <string name="next_month">Next month</string>
+    <string name="no_schedule">No Schedule</string>
+    <string name="class_schedule">Class schedule</string>
+    <string name="exam_schedule">Exam schedule</string>
+
+
+</resources>
